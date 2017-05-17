@@ -17,7 +17,7 @@ p = (y==1);
 n = (y==0);
 
 plot(X(p,1), X(p,2), 'k+', 'LineWidth', 2);
-plot(X(n,1), X(n,2), 'ko', 'MarkerFaceColor', 'r' );
+plot(X(n,1), X(n,2), 'ko', 'MarkerFaceColor', 'r', 'MarkerSize', 7 );
 
 
 
