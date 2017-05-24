@@ -16,11 +16,14 @@ grad = zeros(size(theta));
 %               You should set J to the cost.
 %               Compute the partial derivatives and set grad to the partial
 %               derivatives of the cost w.r.t. each parameter in theta
+L = eye(size(theta, 1));
+L(1, 1) = 0;
+hX = sigmoid(X*theta);
 
 
+J = (-y'*log(hX)-(1-y)'*log(1-hX))/m + (lambda/(2*m))*((L*theta)'*theta);
 
-
-
+grad = ((hX-y)'*X/m)'+(lambda/m).*(L*theta);
 
 % =============================================================
 
